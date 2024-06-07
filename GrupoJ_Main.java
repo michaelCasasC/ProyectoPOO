@@ -7,6 +7,8 @@ public class GrupoJ_Main {
 		int opciones;//para el menú
 		Scanner scanner = new Scanner(System.in);
 		GrupoJ_Compra compra= new GrupoJ_Compra();//objeto de la clase GrupoJ_Compra
+		GrupoJ_Cliente cliente = new GrupoJ_Cliente("","","","","","","",0);//objeto cliente 
+	
 		
 		compra.cabezera();//cabecera de la empreza
 		
@@ -24,6 +26,7 @@ public class GrupoJ_Main {
 				compra.MostrarProductos();
 				break;
 			case 2:
+				cliente.RealizarPedido();
 				break;
 			case 3:
 				break;
