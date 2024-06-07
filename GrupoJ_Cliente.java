@@ -97,10 +97,16 @@ public class GrupoJ_Cliente {
 			if (compra.RealizarPago()==true) {
 				System.out.println("ingrese el numero de su tarjeta");
 				cardComp= scanner.nextLine();
+				do {
 				if (cardComp==cardNumber) {
 					System.out.println("datos correctos");
 					System.out.println("Nombre = "+customerName);
+				}else {
+					System.out.println("numero incorrecto, intentelo denuevo");
+		
 				}
+				}while(cardComp!=cardNumber);
+				
 			}
 			
 			
@@ -117,4 +123,3 @@ public class GrupoJ_Cliente {
 	}
 	
 }
-
