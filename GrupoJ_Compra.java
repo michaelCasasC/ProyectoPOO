@@ -7,6 +7,7 @@ public class GrupoJ_Compra {
 		String []nomProductosCarton = {"CAJA DE CARTON", "CARTON PRENSADO", "CARTON CORRUGADO", "CARTULINA", "CARTON PIEDRA"};
 		double [] preciosCarton= {0.90 , 0.75, 0.67, 0.80, 1.20 };
 		Scanner scanner= new Scanner(System.in);
+		int desicion;
 	
 	public void cabezera() {
 		System.out.println("----------------------------------------------------------- -");
@@ -62,6 +63,22 @@ public class GrupoJ_Compra {
 	}
 	
 	public boolean RealizarPago() {
+		do {
+		System.out.println("desea realizar el pago");
+		System.out.println("1. Sí             2.NO");
+		desicion=scanner.nextInt();
+		switch(desicion) {
+		case 1:
+			return true;
+			
+		case 2:
+			return false;
+			
+		default:
+			break;	
+		}
+		
+	}while(desicion !=1 && desicion !=2);
 		return false;
 	}
 	
