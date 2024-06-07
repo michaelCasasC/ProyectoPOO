@@ -8,10 +8,5 @@ public class GrupoJ_ProductoPapel extends GrupoJ_Productos {
 		super(nombre,  precio,  tiempoEntrega,  cantProductos);
 		this.subProductoPapel = subProductoPapel;
 	}
-	
-	public void SeleccionarSubProducto() {
-		
-	}
-	
 
 }
