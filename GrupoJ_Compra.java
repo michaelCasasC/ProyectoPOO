@@ -7,7 +7,6 @@ public class GrupoJ_Compra {
 		String []nomProductosCarton = {"CAJA DE CARTON", "CARTON PRENSADO", "CARTON CORRUGADO", "CARTULINA", "CARTON PIEDRA"};
 		double [] preciosCarton= {0.90 , 0.75, 0.67, 0.80, 1.20 };
 		Scanner scanner= new Scanner(System.in);
-		int desicion;
 	
 	public void cabezera() {
 		System.out.println("----------------------------------------------------------- -");
@@ -22,6 +21,14 @@ public class GrupoJ_Compra {
 		System.out.println(" ");
 	}
 	
+	public void menuPrincipal() {
+		System.out.println("--------------------MENÚ DE OPCIONES----------------------");
+		System.out.println("1. Ver productos disponibles y precio por unidad");
+		System.out.println("2. Realizar pedido");
+		System.out.println("3. salir");
+		System.out.println("<<<<<<<<<<INGRESE UNA OPCIÓN>>>>>>>>>>>>");
+		System.out.println(" ");
+	}
 	public void MostrarProductos() {
 	  int opciones;
 	  do {
@@ -31,6 +38,7 @@ public class GrupoJ_Compra {
 		  System.out.println("3. regresar");
 		  System.out.println(" ------------INGRESE UNA OPCIÓN---------------");
 		  opciones=scanner.nextInt();
+		  scanner.nextLine();
 		  System.out.println(" ");
 		  switch(opciones) {
 		  case 1:
@@ -63,23 +71,7 @@ public class GrupoJ_Compra {
 	}
 	
 	public boolean RealizarPago() {
-		do {
-		System.out.println("desea realizar el pago");
-		System.out.println("1. Sí             2.NO");
-		desicion=scanner.nextInt();
-		switch(desicion) {
-		case 1:
-			return true;
-			
-		case 2:
-			return false;
-			
-		default:
-			break;	
-		}
-		
-	}while(desicion !=1 && desicion !=2);
-		return false;
+		return true;
 	}
 	
 	public boolean CancelarPago() {
