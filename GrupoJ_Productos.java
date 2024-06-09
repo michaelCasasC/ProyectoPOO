@@ -20,9 +20,13 @@ public class GrupoJ_Productos {
 	}
 	
 	public void IngresarCantProductos() {
+		do {
 		System.out.println("");
 		cantProductos=scanner.nextInt();
-		
+		if(cantProductos<=0 || cantProductos>1500) {
+			System.out.println('\n'+"la cantidad no puede ser menor o igual a cero y tampoco superar las 1500 unidades");
+		}
+		}while(cantProductos<=0 || cantProductos>1500);
 	}
 	
 	public void PrecioVenta() {
@@ -38,4 +42,3 @@ public class GrupoJ_Productos {
 	
 
 }
-
