@@ -9,8 +9,8 @@ public class GrupoJ_ProductoPapel extends GrupoJ_Productos {
 	
 	GrupoJ_Compra compra = new GrupoJ_Compra();
 	
-	public GrupoJ_ProductoPapel(String subProductoPapel,String nombre, double precio, int tiempoEntrega, int cantProductos, double precioVenta) {
-		super(nombre,  precio,  tiempoEntrega,  cantProductos, precioVenta);
+	public GrupoJ_ProductoPapel(String subProductoPapel,String name, double precio, int tiempoEntrega, int cantProductos, double precioVenta) {
+		super(name,  precio,  tiempoEntrega,  cantProductos, precioVenta);
 		this.subProductoPapel = subProductoPapel;
 	}
 	
@@ -57,7 +57,7 @@ public class GrupoJ_ProductoPapel extends GrupoJ_Productos {
 		
 	@Override
 	public void MostrarDatos() {
-		System.out.println("Producto: "+nombre);
+		System.out.println("Producto: "+name);
 		System.out.println("Nombre del Subproducto: "+subProductoPapel);
 		System.out.println("Cantidad: "+cantProductos);
 	}
