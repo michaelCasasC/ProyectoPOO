@@ -19,7 +19,7 @@ public class GrupoJ_ProductoPapel extends GrupoJ_Productos {
 			System.out.println("Productos de papel disponibles: ");
 			System.out.println("1.PAPEL BOND             2.PAPEL MINISTRO "+'\n'
 			                 + "3.PAPEL CALCO            4.PAPEL A3 "+'\n'
-			                 + "5.PAPEL PERIODICO        6.Salir");
+			                 + "5.PAPEL PERIODICO");
 			option=scanner.nextInt();
 			scanner.nextLine();
 			switch(option) {
@@ -43,16 +43,14 @@ public class GrupoJ_ProductoPapel extends GrupoJ_Productos {
 				subProductoPapel=compra.nomProductosPapel[4];
 				precio= compra.preciosPapel[4];
 				break;
-			case 6:
-				System.out.println("------------saliendo-------------");
-				break;
+				
 			default:
 				System.out.println("opción no disponible");
 				break;
 			}
 			 
 			
-		}while( (option<1 && option>6));
+		}while( (option!=1 && option!=2 &&option!=3 &&option!=4 &&option!=5));
 	}
 		
 	@Override
