@@ -10,6 +10,8 @@ public class GrupoJ_Main {
 		GrupoJ_Cliente cliente = new GrupoJ_Cliente("","","","","","","");
 		
 		compra.cabezera();//cabecera de la empreza
+		
+		
 		do { 
 			compra.menuPrincipal();
 			opciones=scanner.nextInt();
@@ -25,8 +27,10 @@ public class GrupoJ_Main {
 				cliente.RealizarPedido();
 				break;
 			case 3:
+				System.out.println('\n'+"-------saliendo-------");
 				break;
 			default:
+				System.out.println("porfavor, ingrese una oción válida");
 				break;
 			}
 		}while(opciones!=3);
