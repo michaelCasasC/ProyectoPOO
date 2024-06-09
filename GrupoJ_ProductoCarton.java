@@ -1,4 +1,4 @@
-package Proyecto_Grupo_J;
+ackage Proyecto_Grupo_J;
 import java.util.Scanner;
 
 public class GrupoJ_ProductoCarton extends GrupoJ_Productos {
@@ -18,7 +18,7 @@ public class GrupoJ_ProductoCarton extends GrupoJ_Productos {
 			System.out.println("Productos de papel disponibles: ");
 			System.out.println("1.CAJA DE CARTON             2.CARTON PRENSADO "+'\n'
 			                 + "3.CARTON CORRUGADO            4.CARTULINA "+'\n'
-			                 + "5.CARTON PIEDRA        6.Salir");
+			                 + "5.CARTON PIEDRA"        );
 			option=scanner.nextInt();
 			scanner.nextLine();
 			switch(option) {
@@ -42,16 +42,13 @@ public class GrupoJ_ProductoCarton extends GrupoJ_Productos {
 				subProductoCarton=compra.nomProductosCarton[4];
 				precio= compra.preciosCarton[4];
 				break;
-			case 6:
-				System.out.println("------------saliendo-------------");
-				break;
 			default:
 				System.out.println("opción no disponible");
 				break;
 			}
 			 
 			
-		}while( (option<1 && option>6));
+		}while( (option!=1 && option!=2 &&option!=3 &&option!=4 &&option!=5));
 	}
 	@Override
 	public void MostrarDatos() {
