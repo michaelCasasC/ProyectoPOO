@@ -9,7 +9,7 @@ public class GrupoJ_Cliente {
 	public String numTarjeta;// numero de la tarjeta de credito
 	protected String email; // correo electrónico
 	public String direccionCliente; // lugar donde vive
-	private String contrasenia;// contraseña de su cuenta
+	private String Pasword="1234";// contraseña de su cuenta
 	public String CI; //cedula de identidad 
 	protected String numTelef; // numero de telefono del cliente
 	boolean desicion; //para saber si re realizó la compra o se canceló
@@ -20,12 +20,12 @@ public class GrupoJ_Cliente {
 	GrupoJ_ProductoPapel papel = new GrupoJ_ProductoPapel("","papel",0,0,0,0);// objeto de la clase ProductoPapel
 	GrupoJ_ProductoCarton carton = new GrupoJ_ProductoCarton("","carton",0,0,0,0);//objeto de la clase ProductoCarton
 	
-	public GrupoJ_Cliente (String CustomerName,String numTarjeta,String email,String direccionCliente,String contrasenia,String CI, String numTelef) {
+	public GrupoJ_Cliente (String CustomerName,String numTarjeta,String email,String direccionCliente,String Pasword,String CI, String numTelef) {
 		this.CustomerName = CustomerName;
 		this.numTarjeta = numTarjeta;
 		this.email = email;
 		this.direccionCliente = direccionCliente;
-		this.contrasenia = contrasenia;
+		this.Pasword = Pasword;
 		this.CI = CI;
 		this.numTelef = numTelef;
 		
@@ -76,6 +76,7 @@ public class GrupoJ_Cliente {
 				System.out.println("¿Desea realizar el pago?"+'\n'
 						+ "1. sí           2. No"+'\n');
 				option = scanner.nextInt();
+				scanner.nextLine();
 				switch (option) {
 				case 1:
 					desicion=compra.RealizarPago();
@@ -89,6 +90,7 @@ public class GrupoJ_Cliente {
 				}
 				}while(option<1 && option >2);
 				if (desicion==true) {
+					Getpasword (Pasword);
 					papel.MostrarDatos();
 					System.out.println(" ");
 					System.out.println("gracias por su compra, el pedido llegará en una semana a su dirección específicada");
@@ -110,6 +112,7 @@ public class GrupoJ_Cliente {
 				System.out.println("¿Desea realizar el pago?"+'\n'
 						+ "1. sí           2. No"+'\n');
 				option = scanner.nextInt();
+				scanner.nextLine();
 				switch (option) {// para saber se se cancela o se lleva a cabo el pago 
 				case 1:
 					desicion=compra.RealizarPago();
@@ -122,7 +125,9 @@ public class GrupoJ_Cliente {
 					break;
 				}
 				}while(option<1 && option >2);
+				
 				if (desicion==true) {
+					Getpasword (Pasword);
 					carton.MostrarDatos();
 					System.out.println(" ");
 					System.out.println("gracias por su compra, el pedido llegará en una semana a su dirección específicada");
@@ -172,5 +177,19 @@ public class GrupoJ_Cliente {
 		}catch(IOException e) {
 		
 	}
+	}
+	public void Getpasword(String pasword) {
+		do {
+			System.out.println("Ingrese su contraseña");
+			pasword=scanner.nextLine();
+			if (!pasword.equals("1234")) {
+				System.out.println("Contraseña incorrecta. intentelo de nuevo"+'\n');
+	
+			}else {
+				System.out.println("Contraseña correcta"+'\n');
+			}
+			
+		}while(!pasword.equals("1234"));
+		
 	}
 }
